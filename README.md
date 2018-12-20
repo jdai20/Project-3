@@ -24,11 +24,15 @@ the potential at interior points (not on an edge or corner) is updated as the av
 the points on the top and bottom edge of the domain (first and last row) are updated as the average potential value of only three of its neighbors (left, right, and up OR down), since one of its neighbors is outside of the array.
 all points where the potential is fixed by user specifications in #2 should not be updated.
 Finally, repeat the evolution step #3 until the potential field is converged, which means that it stops changing from one iteration to the next. In practice, the field never fully stops changing, but, instead, the changes get smaller and smaller as the iterations continue. For the purposes of this project, a converged potential field is defined as one where the maximum absolute difference between the old and new potential field during the previous evolve step is less than 0.0001.
+
 Programming Tasks
+
 Level 0
 [50 pts - all test cases visible]
 
-Properly format all output printed to the screen, as shown below. Even if you are not able to produce the correct numbers for the later tasks, at this stage you should focus on proper formatting of the printf() statements. This should give a nice overall structure to you main() function, to which you will add more functionality as you move forward with the coding tasks. Note: beyond this Level 0 task, the remainder of the output of your code must be variables printed with proper formatting as a result of your programming; that is, OUTPUT BEYOND THESE BASIC PRINT STATEMENTS CANNOT BE HARDCODED just to pass test cases.
+Properly format all output printed to the screen, as shown below. Even if you are not able to produce the correct numbers for the later tasks, at this stage you should focus on proper formatting of the printf() statements. This should give a nice overall structure to you main() function, to which you will add more functionality as you move forward with the coding tasks. Note: beyond this Level 0 task, the remainder of the output of your code must be variables printed with proper formatting as a result of your programming; that is, OUTPUT 
+
+BEYOND THESE BASIC PRINT STATEMENTS CANNOT BE HARDCODED just to pass test cases.
 Enter # rows: 
 Enter # columns: 
 Enter left plate potential value: 
@@ -48,6 +52,7 @@ Max Diff =
 
 The potential field converged after
 The average potential is: 
+
 Level 1
 [25 pts - all test cases visible or show as much detail as possible]
 
@@ -82,12 +87,14 @@ Modify printData2D() to also print out the average value of the array by calling
    10.0    25.4    50.0    15.4   -10.0 
    10.0    20.9    27.2    10.9   -10.0 
 The average potential is: 13.925127
+
 Level 2
 [15 points, some test cases visible]
 
 Iterate the process of updating the potential field exactly 100 times [by repeatedly calling evolveField() from main()]. Print the potential field after 100 iterations (i.e. 100 evolve update steps).
 Write the findMaxCharge() function, which takes in a 1D array of elements with Charge type and an integer for the size of the array. The function should find the Charge in the array with the greatest absolute strength and return that entire Charge element.
 In main(), after the user has entered all input quantities and the array of Charges has been filled, call findMaxCharge() and print the returned Charge using the following format: "Charge at row = 5 and column = 4 has potential strength = 100.0".
+
 Level 3
 [10 points, all test cases hidden]
 
@@ -103,6 +110,7 @@ Max Diff = 0.000091
 The average potential is: 49.079746
 The potential field converged after 129 iterations
 Do not allow the user to enter charge locations that are not in the array. If the user enters an invalid row or column index number, continue requesting another input until a valid number is entered.
+
 Level 3+
 [up to 10 extra credit points]
 
@@ -110,6 +118,7 @@ Choose a set of inputs to your liking with many internal charges, but uncharged 
 the potential field array from your program output
 the colored visualization of your potential field using external software
 a screenshot of a comparable charge configuration using the Phet Simulations with the electric potential (voltage) field shown and a nice collection of equipotential (green) lines.
+
 Grading
 [200 points total]
 
